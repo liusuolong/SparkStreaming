@@ -14,6 +14,7 @@ object WordCountTest_01 {
     val conf: SparkConf = new SparkConf().setAppName("SparkCoreTest").setMaster("local[*]")
 
     //2.创建sparkStreaming上下文环境对象
+    // Seconds(3)批次处理时间 3s
     val ssc = new StreamingContext(conf,Seconds(3))
 
     //操作数据源,从端口获取一行数据
