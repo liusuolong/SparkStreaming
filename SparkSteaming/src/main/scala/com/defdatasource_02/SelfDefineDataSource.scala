@@ -56,6 +56,7 @@ class MyReceiver(host:String,port:Int) extends Receiver[String](StorageLevel.MEM
       var input:String = null
       //循环读取数据 并发送个spark
       while( (input=reader.readLine()) != null){
+        //存储
         store(input)
       }
     } catch {
